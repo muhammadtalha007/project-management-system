@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project-list',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectListComponent implements OnInit {
 
-  constructor() { }
+  public projects;
+  public router;
+  constructor(private routers: Router) {
+    this.router = routers;
+  }
 
   ngOnInit(): void {
+  }
+
+  addProject() {
+    this.router.navigateByUrl('/add-projects');
   }
 
 }

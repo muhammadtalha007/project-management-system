@@ -1,0 +1,19 @@
+<form>
+
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" name="name" [(ngModel)]="project.name">
+  </div>
+
+  <div>
+    <label for="description">
+      Description
+    </label>
+    <input id="description" type="text" name="description" [(ngModel)]="project.description">
+  </div>
+
+  <button class="button" (click)="addProject()">Add</button>
+
+</form>

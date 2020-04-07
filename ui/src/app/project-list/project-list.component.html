@@ -1,19 +1,47 @@
 <h2>Projects</h2>
 
-<div *ngFor="let project of projects">
+<button (click)="addProject()">
+  Add Project
+</button>
 
-  <h3>
-    <a [title]="project.name + ' details'">
-      {{ product.name }}
-    </a>
-  </h3>
-
-  <p *ngIf="product.description">
-    Description: {{ product.description }}
-  </p>
-
-  <button (click)="share()">
-    Share
-  </button>
-
+<div>
+  <h1>Project List</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>#ID</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let project of projects">
+      <th>{{ project.id }}</th>
+      <td>{{ project.name }}</td>
+      <td>{{ project.description }}</td>
+      <td>
+        <button type="button" >Edit</button>
+        <button type="button" >Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
 </div>
+
+<!--<div *ngFor="let project of projects">-->
+
+  <!--<h3>-->
+    <!--<a [title]="project.name + ' details'">-->
+      <!--{{ product.name }}-->
+    <!--</a>-->
+  <!--</h3>-->
+
+  <!--<p *ngIf="product.description">-->
+    <!--Description: {{ product.description }}-->
+  <!--</p>-->
+
+  <!--<button (click)="share()">-->
+    <!--Share-->
+  <!--</button>-->
+
+<!--</div>-->
